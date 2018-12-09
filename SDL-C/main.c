@@ -142,11 +142,11 @@ int main() {
 			if (color == consolePalette) multi = 1;
 
 			for (int cc = 0; cc < 4; cc++) {
-				contPalette.x = round(EMU_SCREENW / (palettesCount) * color * 2);
-				contPalette.y = round((EMU_SCREENH / 8) * cc * multi);
+				contPalette.x = (int)round(EMU_SCREENW / (palettesCount) * color * 2);
+				contPalette.y = (int)round((EMU_SCREENH / 8) * cc * multi);
 
-				contPalette.w = round(EMU_SCREENW / palettesCount * 2);
-				contPalette.h = round(EMU_SCREENH / 8 * multi);
+				contPalette.w = (int)round(EMU_SCREENW / palettesCount * 2);
+				contPalette.h = (int)round(EMU_SCREENH / 8 * multi);
 
 				if (inClick == 1) {
 					//printf("%d\n", round(multi * 100) / 100);
